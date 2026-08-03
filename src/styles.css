@@ -181,3 +181,14 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Phase II — Civic Intelligence environment (NASA-quiet, editorial dark) */
+.civic-dark {
+  --background: oklch(0.22 0.012 250);
+  --foreground: oklch(0.93 0.008 90);
+  --muted-foreground: oklch(0.7 0.012 250);
+  --rule: oklch(0.42 0.02 250);
+  --bronze: oklch(0.72 0.08 68);
+  background-color: var(--background);
+  color: var(--foreground);
+}
