@@ -10,7 +10,7 @@ export function Manifesto() {
     <section
       id="manifesto"
       ref={ref}
-      className="paper-grain relative overflow-hidden bg-paper py-40 md:py-56"
+      className="paper-grain relative scroll-mt-24 overflow-hidden bg-paper py-40 md:py-56"
       aria-labelledby="manifesto-title"
     >
       <ArtworkLayer src={civicArt.artwork} opacity={0.22} speed={0.08} scale={1.15} />

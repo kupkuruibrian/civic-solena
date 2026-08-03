@@ -21,7 +21,7 @@ export function InvisibleLayer() {
     <section
       id="invisible-layer"
       ref={ref}
-      className="paper-grain relative overflow-hidden bg-background py-40 md:py-56"
+      className="paper-grain relative scroll-mt-24 overflow-hidden bg-background py-40 md:py-56"
       aria-labelledby="invisible-title"
     >
       <ArtworkLayer src={civicArt.invisibleCity} opacity={0.26} speed={0.1} scale={1.18} />

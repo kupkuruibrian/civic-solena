@@ -46,7 +46,7 @@ export function PublicMemory() {
     <section
       id="public-memory"
       ref={sectionRef}
-      className="relative h-[300vh] bg-paper-deep"
+      className="relative h-[300vh] scroll-mt-24 bg-paper-deep"
       aria-labelledby="memory-title"
     >
       <div className="paper-grain sticky top-0 flex h-dvh items-center overflow-hidden">

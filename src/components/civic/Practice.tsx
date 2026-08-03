@@ -25,7 +25,7 @@ export function Practice() {
     <section
       id="practice"
       ref={ref}
-      className="paper-grain relative overflow-hidden bg-background py-40 md:py-56"
+      className="paper-grain relative scroll-mt-24 overflow-hidden bg-background py-40 md:py-56"
       aria-labelledby="practice-title"
     >
       <ArtworkLayer
