@@ -79,9 +79,9 @@ export const ATLAS_EDGES: [string, string][] = [
   ["development", "ngos"], ["development", "insurance"], ["development", "counties"],
   ["embassies", "tourism"], ["embassies", "investment"], ["embassies", "development"],
   ["tourism", "environment"], ["tourism", "museums"], ["tourism", "transport"],
-  ["education", "museums"], ["education", "knowledgeless" as string].slice(0, 2) as [string, string],
+  ["education", "museums"],
   ["insurance", "ngos"], ["investment", "tax"], ["agriculture", "environment"], ["museums", "embassies"],
-].filter(([a, b]) => a !== "education" || b !== "knowledgeless") as [string, string][];
+];
 
 export const NODE_BY_ID = new Map(ATLAS_NODES.map((n) => [n.id, n]));
 
