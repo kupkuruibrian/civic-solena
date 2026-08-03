@@ -2,7 +2,7 @@ import { CivicNetwork } from "./CivicNetwork";
 
 export function CivicFooter() {
   return (
-    <footer className="paper-grain relative overflow-hidden bg-paper py-48 md:py-64">
+    <footer id="contact" className="paper-grain relative scroll-mt-24 overflow-hidden bg-paper py-28 sm:py-40 md:py-64">
       <CivicNetwork
         variant="contour"
         seed={97}
