@@ -5,6 +5,12 @@ import { Manifesto } from "@/components/civic/Manifesto";
 import { InvisibleLayer } from "@/components/civic/InvisibleLayer";
 import { PublicMemory } from "@/components/civic/PublicMemory";
 import { Practice } from "@/components/civic/Practice";
+import { CivicAtlas } from "@/components/civic/CivicAtlas";
+import { EditorialInsert } from "@/components/civic/EditorialInsert";
+import { PracticeLandscapes } from "@/components/civic/PracticeLandscapes";
+import { Localization } from "@/components/civic/Localization";
+import { CampaignSystems } from "@/components/civic/CampaignSystems";
+import { CivicIntelligence } from "@/components/civic/CivicIntelligence";
 import { CivicFooter } from "@/components/civic/CivicFooter";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
