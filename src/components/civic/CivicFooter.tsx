@@ -1,4 +1,5 @@
 import { CivicNetwork } from "./CivicNetwork";
+import { ContactForm } from "./ContactForm";
 
 export function CivicFooter() {
   return (
@@ -15,16 +16,28 @@ export function CivicFooter() {
           Designing institutions that outlast administrations.
         </p>
 
-        <div className="rule-hair mt-40 flex flex-wrap items-baseline justify-between gap-8 pt-8">
+        <div className="rule-hair mt-24 grid gap-12 pt-14 md:mt-32 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] md:gap-20">
+          <div>
+            <p className="label-civic">Enquiries</p>
+            <p className="mt-6 max-w-xs text-[0.95rem] leading-relaxed text-muted-foreground">
+              For governments, institutions and civic organisations considering long-horizon work.
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+
+
+        <div className="rule-hair mt-28 flex flex-wrap items-baseline justify-between gap-8 pt-8">
           <p className="label-civic text-foreground">Solena Civic</p>
           <a
             href="mailto:studio@solenacivic.com"
             className="label-civic hover:text-foreground transition-colors duration-700"
           >
-            Begin the conversation
+            studio@solenacivic.com
           </a>
           <p className="label-civic">MMXXVI</p>
         </div>
+
       </div>
     </footer>
   );
