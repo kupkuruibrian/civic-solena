@@ -100,10 +100,11 @@ export function CivicAtlas() {
 
         {/* Atlas plane */}
         <div className="relative mt-10 md:mt-14">
-          <div className="relative w-full overflow-x-auto md:overflow-visible">
+          <div className="relative w-full">
             <svg
               viewBox={`0 0 ${W} ${H}`}
-              className="h-[62vh] min-h-[420px] w-[190vw] max-w-none touch-pan-y sm:w-[130vw] md:h-auto md:w-full"
+              preserveAspectRatio="xMidYMid meet"
+              className="h-auto w-full max-w-full touch-pan-y"
               role="img"
               aria-labelledby="atlas-svg-title atlas-svg-desc"
             >
