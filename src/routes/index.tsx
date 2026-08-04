@@ -50,18 +50,9 @@ function Index() {
         <Hero />
         <Manifesto />
         <InvisibleLayer />
-        <PublicMemory />
-        <Practice />
         <EditorialInsert lines={["Infrastructure", "is information."]} attribution="Phase II — The System" tone="deep" />
-        <CivicAtlas />
-        <EditorialInsert lines={["Every institution communicates.", "Even when silent."]} />
-        <PracticeLandscapes />
-        <EditorialInsert lines={["Trust travels", "through systems."]} tone="deep" />
-        <Localization />
-        <CampaignSystems />
-        <EditorialInsert lines={["Design is governance", "made visible."]} tone="deep" />
-        <CivicIntelligence />
-        <EditorialInsert lines={["Citizens remember experiences.", "Not policies."]} />
+        <ChapterIndex />
+
       </main>
       <CivicFooter />
     </>
