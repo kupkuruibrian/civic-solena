@@ -78,9 +78,9 @@ export function CivicAtlas() {
         {/* Layer strata */}
         <div className="mt-12 sm:mt-16">
           <p className="label-civic mb-4">Institutional layers</p>
-          <ul className="-mx-1 flex snap-x gap-x-6 gap-y-3 overflow-x-auto px-1 pb-2 md:flex-wrap md:overflow-visible">
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 pb-2">
             {ATLAS_LAYERS.map((l) => (
-              <li key={l.id} className="shrink-0 snap-start">
+              <li key={l.id}>
                 <button
                   type="button"
                   aria-pressed={layer === l.id}
@@ -100,10 +100,11 @@ export function CivicAtlas() {
 
         {/* Atlas plane */}
         <div className="relative mt-10 md:mt-14">
-          <div className="relative w-full overflow-x-auto md:overflow-visible">
+          <div className="relative w-full">
             <svg
               viewBox={`0 0 ${W} ${H}`}
-              className="h-[62vh] min-h-[420px] w-[190vw] max-w-none touch-pan-y sm:w-[130vw] md:h-auto md:w-full"
+              preserveAspectRatio="xMidYMid meet"
+              className="h-auto w-full max-w-full touch-pan-y"
               role="img"
               aria-labelledby="atlas-svg-title atlas-svg-desc"
             >
