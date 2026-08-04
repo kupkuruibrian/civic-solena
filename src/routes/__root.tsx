@@ -83,6 +83,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Solena Civic" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Solena Civic" },
+      { name: "twitter:title", content: "Solena Civic" },
+      { property: "og:description", content: "Designing the systems through which governments, institutions and citizens experience one another." },
+      { name: "twitter:description", content: "Designing the systems through which governments, institutions and citizens experience one another." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/OKZGS0Zm2JRyL50fLVzwr1mK3bq2/social-images/social-1785839429306-social-image.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/OKZGS0Zm2JRyL50fLVzwr1mK3bq2/social-images/social-1785839429306-social-image.webp" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -95,7 +101,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
 
