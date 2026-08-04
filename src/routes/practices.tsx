@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CivicNav } from "@/components/civic/CivicNav";
 import { Practice } from "@/components/civic/Practice";
+import { PublicMemory } from "@/components/civic/PublicMemory";
 import { PracticeLandscapes } from "@/components/civic/PracticeLandscapes";
 import { ChapterHeader, ChapterFootLink } from "@/components/civic/ChapterHeader";
 import { CivicFooter } from "@/components/civic/CivicFooter";
@@ -35,6 +36,7 @@ function PracticesPage() {
         />
         <PracticeLandscapes />
         <Practice />
+        <PublicMemory />
         <ChapterFootLink to="/systems" label="Systems in Public" />
       </main>
       <CivicFooter />
