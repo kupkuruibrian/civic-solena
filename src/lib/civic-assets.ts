@@ -1,5 +1,5 @@
 import artwork01 from "@/assets/artwork-01.png.asset.json";
-import civicTopography from "@/assets/civic-topography.png.asset.json";
+import civicTopography from "@/assets/civic-topography-2.png.asset.json";
 import civilisationArtwork from "@/assets/civilisation-artwork.png.asset.json";
 import civilisationBlueprint from "@/assets/civilisation-blueprint.png.asset.json";
 import invisibleCity from "@/assets/invisible-city-01.png.asset.json";
