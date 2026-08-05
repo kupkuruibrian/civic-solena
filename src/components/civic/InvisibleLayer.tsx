@@ -24,7 +24,7 @@ export function InvisibleLayer() {
       className="paper-grain relative scroll-mt-24 overflow-hidden bg-background py-40 md:py-56"
       aria-labelledby="invisible-title"
     >
-      <ArtworkLayer src={civicArt.invisibleCity} opacity={0.26} speed={0.1} scale={1.18} />
+      <ArtworkLayer src={civicArt.topography} opacity={0.26} speed={0.1} scale={1.18} />
       <CivicNetwork
         variant="routing"
         seed={41}
