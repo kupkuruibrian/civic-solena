@@ -69,12 +69,12 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex items-start justify-between px-8 pt-8 md:px-16 lg:px-24">
+      <div className="relative z-10 flex items-start justify-between px-5 pt-6 sm:px-8 sm:pt-8 md:px-16 lg:px-24">
         <p className="label-civic text-foreground">Solena Civic</p>
         <p className="label-civic hidden md:block">Phase I — The Institution</p>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-8 pb-24 md:px-16 lg:px-24">
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 pb-16 sm:px-8 sm:pb-24 md:px-16 lg:px-24">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <h1
@@ -106,7 +106,7 @@ export function Hero() {
         </div>
 
         <div
-          className="rule-hair mt-20 flex items-center justify-between pt-6"
+          className="rule-hair mt-12 flex sm:mt-20 items-center justify-between pt-6"
           style={{
             opacity: phase >= 3 ? 1 : 0,
             transition: `opacity 3s ${ease} 1.2s`,

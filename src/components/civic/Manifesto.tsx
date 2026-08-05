@@ -22,7 +22,7 @@ export function Manifesto() {
         className="absolute inset-0 h-full w-full"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1600px] px-8 md:px-16 lg:px-24">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 md:px-16 lg:px-24">
         <p className="label-civic mb-16">Section One — Manifesto</p>
         <div className="grid gap-20 lg:grid-cols-12">
           <h2

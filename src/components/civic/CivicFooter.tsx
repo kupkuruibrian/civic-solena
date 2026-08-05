@@ -11,7 +11,7 @@ export function CivicFooter() {
         opacity={0.3}
         className="absolute inset-0 h-full w-full"
       />
-      <div className="relative z-10 mx-auto max-w-[1600px] px-8 md:px-16 lg:px-24">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 md:px-16 lg:px-24">
         <p className="font-display max-w-3xl text-[clamp(1.6rem,3.4vw,3rem)] leading-[1.08] tracking-[-0.015em]">
           Designing institutions that outlast administrations.
         </p>

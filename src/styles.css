@@ -85,8 +85,16 @@
     text-rendering: optimizeLegibility;
   }
 
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   body {
     background-color: var(--color-background);
+    overscroll-behavior-x: none;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv01";
@@ -191,4 +199,17 @@
   --bronze: oklch(0.72 0.08 68);
   background-color: var(--background);
   color: var(--foreground);
+}
+
+/* Touch devices: no hover reliance, calmer motion, cheaper compositing */
+@media (hover: none) {
+  .paper-grain::after {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 767px) {
+  .label-civic {
+    letter-spacing: 0.18em;
+  }
 }

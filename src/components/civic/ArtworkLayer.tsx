@@ -27,6 +27,8 @@ export function ArtworkLayer({
     const node = ref.current;
     if (!node) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // Parallax is expensive on phones — keep the artwork still there.
+    if (window.matchMedia("(max-width: 767px)").matches) return;
 
     let frame = 0;
     const onScroll = () => {

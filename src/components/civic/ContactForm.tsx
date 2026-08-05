@@ -15,7 +15,7 @@ const schema = z.object({
 type Field = "name" | "email" | "organisation" | "message";
 
 const FIELD_CLASS =
-  "w-full border-0 border-b border-[color-mix(in_oklab,var(--rule)_70%,transparent)] bg-transparent pb-3 pt-2 text-[0.95rem] text-foreground placeholder:text-muted-foreground/60 focus:border-foreground focus:outline-none transition-colors duration-500";
+  "w-full border-0 border-b border-[color-mix(in_oklab,var(--rule)_70%,transparent)] bg-transparent pb-3 pt-2 text-base text-foreground placeholder:text-muted-foreground/60 focus:border-foreground focus:outline-none transition-colors duration-500 sm:text-[0.95rem]";
 
 export function ContactForm() {
   const [values, setValues] = useState<Record<Field, string>>({
@@ -60,13 +60,13 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} noValidate className="max-w-2xl">
-      <div className="grid gap-10 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate className="w-full max-w-2xl">
+      <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
         <div>
           <label htmlFor="cf-name" className="label-civic block">
             Name
           </label>
-          <input id="cf-name" name="name" value={values.name} onChange={set("name")} className={`${FIELD_CLASS} mt-4`} />
+          <input id="cf-name" name="name" autoComplete="name" enterKeyHint="next" value={values.name} onChange={set("name")} className={`${FIELD_CLASS} mt-4`} />
           {errors.name ? <p className="label-civic mt-3 text-foreground">{errors.name}</p> : null}
         </div>
         <div>
@@ -76,7 +76,7 @@ export function ContactForm() {
           <input
             id="cf-email"
             name="email"
-            type="email"
+            type="email" inputMode="email" autoComplete="email"
             value={values.email}
             onChange={set("email")}
             className={`${FIELD_CLASS} mt-4`}
@@ -92,6 +92,7 @@ export function ContactForm() {
         <input
           id="cf-org"
           name="organisation"
+          autoComplete="organization"
           value={values.organisation}
           onChange={set("organisation")}
           className={`${FIELD_CLASS} mt-4`}
@@ -117,7 +118,7 @@ export function ContactForm() {
       <div className="mt-12 flex flex-wrap items-baseline gap-6">
         <button
           type="submit"
-          className="label-civic rule-hair border-0 border-b border-foreground pb-2 text-foreground transition-opacity duration-700 hover:opacity-55"
+          className="label-civic rule-hair min-h-11 border-0 border-b border-foreground pb-2 text-foreground transition-opacity duration-700 hover:opacity-55"
         >
           Begin the conversation
         </button>
