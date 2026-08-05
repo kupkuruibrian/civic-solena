@@ -87,7 +87,7 @@ export function CivicAtlas() {
                   type="button"
                   aria-pressed={layer === l.id}
                   onClick={() => setLayer(layer === l.id ? null : l.id)}
-                  className="label-civic whitespace-nowrap py-1 transition-colors duration-500 hover:text-foreground"
+                  className="label-civic inline-flex min-h-9 items-center whitespace-nowrap py-1 transition-colors duration-500 hover:text-foreground"
                   style={{ color: layer === l.id ? "var(--bronze)" : undefined }}
                 >
                   {l.label}
@@ -214,7 +214,7 @@ export function CivicAtlas() {
               {activeNode ? activeNode.label : "Everything is connected."}
             </p>
             <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              {activeNode ? activeNode.note : "Hover, tap or tab through the atlas to reveal relationships."}
+              {activeNode ? activeNode.note : "Tap any node — or a system below — to reveal what it connects to."}
             </p>
           </div>
         </div>
@@ -229,7 +229,7 @@ export function CivicAtlas() {
                   type="button"
                   onClick={() => setActive(active === n.id ? null : n.id)}
                   onFocus={() => setActive(n.id)}
-                  className="label-civic transition-colors duration-500 hover:text-foreground"
+                  className="label-civic inline-flex min-h-9 items-center transition-colors duration-500 hover:text-foreground"
                   style={{ color: active === n.id ? "var(--bronze)" : undefined }}
                 >
                   {n.label}

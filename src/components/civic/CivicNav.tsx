@@ -50,7 +50,7 @@ export function CivicNav({ alwaysVisible = false }: { alwaysVisible?: boolean })
           </ul>
           <button
             type="button"
-            className="label-civic md:hidden"
+            className="label-civic -mr-2 inline-flex min-h-11 min-w-11 items-center justify-end px-2 md:hidden"
             aria-expanded={open}
             aria-controls="civic-mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -63,18 +63,18 @@ export function CivicNav({ alwaysVisible = false }: { alwaysVisible?: boolean })
       <div
         id="civic-mobile-nav"
         className="overflow-hidden bg-background/95 backdrop-blur-sm transition-all duration-700 ease-out md:hidden"
-        style={{ maxHeight: open ? "22rem" : "0rem", opacity: open ? 1 : 0 }}
+        style={{ maxHeight: open ? "26rem" : "0rem", opacity: open ? 1 : 0 }}
       >
-        <ul className="px-5 pb-6 sm:px-8">
+        <ul className="px-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-8">
           {SECTIONS.map((s) => (
             <li key={s.to} className="rule-hair">
-              <Link to={s.to} onClick={() => setOpen(false)} className="label-civic block py-4">
+              <Link to={s.to} onClick={() => setOpen(false)} className="label-civic block py-5">
                 {s.label}
               </Link>
             </li>
           ))}
           <li className="rule-hair">
-            <a href="#contact" onClick={() => setOpen(false)} className="label-civic block py-4">
+            <a href="#contact" onClick={() => setOpen(false)} className="label-civic block py-5">
               Conversation
             </a>
           </li>
