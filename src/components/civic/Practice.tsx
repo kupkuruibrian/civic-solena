@@ -36,7 +36,7 @@ export function Practice() {
         mask="radial-gradient(70% 60% at 80% 30%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1600px] px-8 md:px-16 lg:px-24">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 md:px-16 lg:px-24">
         <p className="label-civic mb-16">Section Four — The Practice</p>
         <h2
           id="practice-title"

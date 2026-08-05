@@ -33,7 +33,7 @@ export function InvisibleLayer() {
         className="absolute inset-0 h-full w-full transition-opacity duration-[2000ms]"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1600px] px-8 md:px-16 lg:px-24">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 md:px-16 lg:px-24">
         <p className="label-civic mb-16">Section Two — The Invisible Layer</p>
 
         <div className="grid gap-24 lg:grid-cols-12">

@@ -72,7 +72,7 @@ export function PublicMemory() {
           className="absolute inset-0 h-full w-full"
         />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-8 md:px-16 lg:px-24">
+        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 sm:px-8 md:px-16 lg:px-24">
           <p id="memory-title" className="label-civic mb-16">
             Section Three — Public Memory
           </p>
