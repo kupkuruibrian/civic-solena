@@ -15,7 +15,7 @@ const schema = z.object({
 type Field = "name" | "email" | "organisation" | "message";
 
 const FIELD_CLASS =
-  "w-full border-0 border-b border-[color-mix(in_oklab,var(--rule)_70%,transparent)] bg-transparent pb-3 pt-2 text-[0.95rem] text-foreground placeholder:text-muted-foreground/60 focus:border-foreground focus:outline-none transition-colors duration-500";
+  "w-full border-0 border-b border-[color-mix(in_oklab,var(--rule)_70%,transparent)] bg-transparent pb-3 pt-2 text-base text-foreground placeholder:text-muted-foreground/60 focus:border-foreground focus:outline-none transition-colors duration-500 sm:text-[0.95rem]";
 
 export function ContactForm() {
   const [values, setValues] = useState<Record<Field, string>>({
