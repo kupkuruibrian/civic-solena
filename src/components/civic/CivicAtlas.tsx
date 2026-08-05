@@ -147,7 +147,8 @@ export function CivicAtlas() {
                   const isActive = active === n.id;
                   const isLit = !!lit && lit.has(n.id);
                   const dim = (!!lit && !isLit) || !inLayer(n.layers);
-                  const r = 2 + n.scale * 1.7;
+                  const r = (2 + n.scale * 1.7) * (isMobile ? 2 : 1);
+                  const showLabel = !isMobile || isActive || (n.scale >= 2.4 && !lit);
                   return (
                     <g
                       key={n.id}
@@ -156,21 +157,21 @@ export function CivicAtlas() {
                       aria-label={`${n.label}. ${n.note}`}
                       aria-pressed={isActive}
                       className="cursor-pointer outline-none"
-                      onMouseEnter={() => setActive(n.id)}
-                      onMouseLeave={() => setActive(null)}
+                      onMouseEnter={() => !isMobile && setActive(n.id)}
+                      onMouseLeave={() => !isMobile && setActive(null)}
                       onFocus={() => setActive(n.id)}
                       onBlur={() => setActive(null)}
                       onClick={() => setActive(isActive ? null : n.id)}
                       style={{ opacity: dim ? 0.22 : 1, transition: "opacity 1s ease" }}
                     >
-                      <circle cx={n.x} cy={n.y} r={r + 16} fill="transparent" />
+                      <circle cx={n.x} cy={n.y} r={r + (isMobile ? 34 : 16)} fill="transparent" />
                       <circle
                         cx={n.x}
                         cy={n.y}
-                        r={r + (isActive ? 8 : 0)}
+                        r={r + (isActive ? (isMobile ? 14 : 8) : 0)}
                         fill="none"
                         stroke={isLit ? "var(--bronze)" : "var(--rule)"}
-                        strokeWidth={0.8}
+                        strokeWidth={isMobile ? 1.6 : 0.8}
                         style={{
                           transition: "r 1.2s cubic-bezier(0.16,0.7,0.16,1), stroke 0.8s ease",
                           animation: `solena-node ${16 + (i % 6) * 3}s ease-in-out ${(i % 9) * 0.7}s infinite`,
@@ -183,20 +184,23 @@ export function CivicAtlas() {
                         fill={isLit ? "var(--bronze)" : "var(--foreground)"}
                         style={{ transition: "fill 0.8s ease" }}
                       />
-                      <text
-                        x={n.x + r + 9}
-                        y={n.y + 3.5}
-                        fontSize={n.scale >= 2 ? 11 : 9.5}
-                        fill="currentColor"
-                        className="pointer-events-none fill-muted-foreground font-sans"
-                        style={{
-                          letterSpacing: "0.06em",
-                          opacity: isLit || !lit ? 1 : 0.4,
-                          transition: "opacity 0.8s ease",
-                        }}
-                      >
-                        {n.label}
-                      </text>
+                      {showLabel ? (
+                        <text
+                          x={n.x + r + (isMobile ? 14 : 9)}
+                          y={n.y + (isMobile ? 8 : 3.5)}
+                          fontSize={isMobile ? 22 : n.scale >= 2 ? 11 : 9.5}
+                          fill="currentColor"
+                          className={`pointer-events-none font-sans ${isActive ? "fill-foreground" : "fill-muted-foreground"}`}
+                          style={{
+                            letterSpacing: "0.06em",
+                            opacity: isLit || !lit ? 1 : 0.4,
+                            transition: "opacity 0.8s ease",
+                          }}
+                        >
+                          {n.label}
+                        </text>
+                      ) : null}
+
                     </g>
                   );
                 })}
