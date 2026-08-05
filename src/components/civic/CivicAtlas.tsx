@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { ArtworkLayer } from "./ArtworkLayer";
 import { useReveal } from "@/hooks/use-reveal";
 import { civicArt } from "@/lib/civic-assets";
