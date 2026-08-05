@@ -32,6 +32,7 @@ export function CivicAtlas() {
   const { ref, shown } = useReveal<HTMLElement>(0.08);
   const [active, setActive] = useState<string | null>(null);
   const [layer, setLayer] = useState<AtlasLayer | null>(null);
+  const isMobile = useIsMobile();
 
   const lit = useMemo(() => (active ? neighboursOf(active) : null), [active]);
   const activeNode = active ? NODE_BY_ID.get(active) : null;
